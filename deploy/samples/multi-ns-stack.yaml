@@ -1,0 +1,15 @@
+apiVersion: monitoring.rhobs/v1alpha1
+kind: MonitoringStack
+metadata:
+  name: multi-ns
+  labels:
+    thanos-querier: the-querier
+spec:
+  logLevel: debug
+  retention: 2h
+  resourceSelector:
+    matchLabels:
+      app: demo
+  namespaceSelector:
+    matchLabels:
+      monitoring.rhobs/stack: multi-ns

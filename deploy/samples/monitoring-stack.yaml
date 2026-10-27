@@ -9,4 +9,4 @@ spec:
   retention: 1d
   resourceSelector:
     matchLabels:
-      system: foo
+      app: demo
